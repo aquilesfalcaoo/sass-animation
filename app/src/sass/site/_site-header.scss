@@ -1,0 +1,39 @@
+/* MOBILE STYLES ------------------------------------------------------------*/
+.header-animado {
+  $h: 300px;
+  background-color: $main-color;
+  width: 95vw;
+  box-shadow: 0 12px 11px -7px rgba(0,0,0,.8);
+  max-height: 90vh;
+  overflow: hidden;
+  padding-top: 26px;
+
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  &__title{
+    color: darken($main-color, 30%);
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__subtitle{
+    color: white;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  &__ilustra {
+    background-image: url(../../../assets/img/cenario_all_960.png);
+  }
+}
+/* MEDIA QUERY --------------------------------------------------------------*/
+@media (min-width: $screen-sm-min) {
+}
+@media (min-width: $screen-md-min) {
+}
+@media (min-width: $screen-lg-min) {
+}

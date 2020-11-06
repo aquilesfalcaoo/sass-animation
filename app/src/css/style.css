@@ -1,0 +1,105 @@
+/* MOBILE STYLES ------------------------------------------------------------*/
+/* BUTTONS ------------------------------------------------------------------*/
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+.black {
+  color: #000; }
+
+.white {
+  color: #fff; }
+
+/* MOBILE STYLES ------------------------------------------------------------*/
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* MOBILE STYLES ------------------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  border: none;
+  box-sizing: border-box;
+  color: #000;
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  width: 100%; }
+
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* MOBILE STYLES ------------------------------------------------------------*/
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* MOBILE STYLES ------------------------------------------------------------*/
+.title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  margin-top: 10px; }
+
+.subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin-top: 10px; }
+
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/* MOBILE STYLES ------------------------------------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ddd; }
+
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* MOBILE STYLES ------------------------------------------------------------*/
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* MOBILE STYLES ------------------------------------------------------------*/
+.header-animado {
+  background-color: #64a59a;
+  width: 95vw;
+  box-shadow: 0 12px 11px -7px rgba(0, 0, 0, 0.8);
+  max-height: 90vh;
+  overflow: hidden;
+  padding-top: 26px; }
+  .header-animado .container {
+    max-width: 90%;
+    margin: auto; }
+  .header-animado__title {
+    color: #294742;
+    font-size: 30px;
+    font-weight: bold; }
+  .header-animado__subtitle {
+    color: white;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300; }
+  .header-animado__ilustra {
+    background-image: url(../../../assets/img/cenario_all_960.png); }
+
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* MOBILE STYLES ------------------------------------------------------------*/
+/* MEDIA QUERY --------------------------------------------------------------*/
+/* MOBILE STYLES ------------------------------------------------------------*/
+/* MEDIA QUERY --------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
