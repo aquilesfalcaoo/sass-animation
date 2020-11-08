@@ -1,6 +1,7 @@
 /* MOBILE STYLES ------------------------------------------------------------*/
 .header-animado {
   $h: 300px;
+  $w_cenario: 2400px;
   background-color: $main-color;
   width: 95vw;
   box-shadow: 0 12px 11px -7px rgba(0,0,0,.8);
@@ -34,11 +35,56 @@
 
     &>div {
       display: none;
+      width: $w_cenario * 2;
     }
 
     @media screen and(min-width: 960px) {
       background-image: url(../../../assets/img/cenario_bg.png);
       height: $h;
+      position: relative;
+
+      &>div {
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      @keyframes anima_cenario {
+        from {
+          transform: translateX(-50%) translateY(0);
+        }
+        to {
+          transform: translateX(0%) translateY(0);
+        }
+      }
+
+      .nuvens {
+        background-image: url(../../../assets/img/cenario_nuvens.png);
+        animation: anima_cenario 20s linear infinite reverse;
+      }
+
+      .casas {
+        background-image: url(../../../assets/img/cenario_casas.png);
+        animation: anima_cenario 10s linear infinite reverse;
+      }
+
+      .rua {
+        background-image: url(../../../assets/img/cenario_rua.png);
+        animation: anima_cenario 10s linear infinite reverse;
+      }
+
+      .carrosCima {
+        background-image: url(../../../assets/img/cenario_carrosCima.png);
+        animation: anima_cenario 5s linear infinite reverse;
+      }
+
+      .carrosBaixo {
+        background-image: url(../../../assets/img/cenario_carrosBaixo.png);
+        animation: anima_cenario 10s linear infinite;
+      }
     }
   }
 }
