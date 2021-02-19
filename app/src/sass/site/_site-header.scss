@@ -4,7 +4,7 @@
   $w_cenario: 2400px;
   background-color: $main-color;
   width: 95vw;
-  box-shadow: 0 12px 11px -7px rgba(0,0,0,.8);
+  box-shadow: 0 12px 11px -7px rgba(0, 0, 0, 0.8);
   max-height: 90vh;
   overflow: hidden;
   padding-top: 26px;
@@ -14,13 +14,13 @@
     margin: auto;
   }
 
-  &__title{
+  &__title {
     color: darken($main-color, 30%);
     font-size: 30px;
     font-weight: bold;
   }
 
-  &__subtitle{
+  &__subtitle {
     color: white;
     font-size: 24px;
     line-height: 1.5;
@@ -33,24 +33,14 @@
     background-size: auto 100%;
     background-position: center top;
 
-    &>div {
+    & > div {
       display: none;
       width: $w_cenario * 2;
     }
 
-    @media screen and(min-width: 960px) {
-      background-image: url(../../../assets/img/cenario_bg.png);
-      height: $h;
-      position: relative;
-
-      &>div {
-        display: block;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-      }
+    @mixin anima($imagem, $tempo, $direcao: reverse) {
+      background-image: url(../../../assets/img/cenario_#{$imagem}.png);
+      animation: anima_cenario #{$tempo} linear infinite #{$direcao};
 
       @keyframes anima_cenario {
         from {
@@ -60,30 +50,29 @@
           transform: translateX(0%) translateY(0);
         }
       }
+    }
 
-      .nuvens {
-        background-image: url(../../../assets/img/cenario_nuvens.png);
-        animation: anima_cenario 20s linear infinite reverse;
+    @media screen and(min-width: 960px) {
+      background-image: url(../../../assets/img/cenario_bg.png);
+      height: $h;
+      position: relative;
+
+      & > div {
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
       }
 
-      .casas {
-        background-image: url(../../../assets/img/cenario_casas.png);
-        animation: anima_cenario 10s linear infinite reverse;
-      }
+      $anima_elements: "nuvens" 90s reverse, "casas" 30s reverse,
+        "rua" 30s reverse, "carrosCima" 15s reverse, "carrosBaixo" 15s normal;
 
-      .rua {
-        background-image: url(../../../assets/img/cenario_rua.png);
-        animation: anima_cenario 10s linear infinite reverse;
-      }
-
-      .carrosCima {
-        background-image: url(../../../assets/img/cenario_carrosCima.png);
-        animation: anima_cenario 5s linear infinite reverse;
-      }
-
-      .carrosBaixo {
-        background-image: url(../../../assets/img/cenario_carrosBaixo.png);
-        animation: anima_cenario 10s linear infinite;
+      @each $el, $tempo, $dir in $anima_elements {
+        .#{$el} {
+          @include anima(#{$el}, $tempo, $dir);
+        }
       }
     }
   }
